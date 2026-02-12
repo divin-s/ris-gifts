@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { GIFT_CATEGORIES } from "@/lib/constants";
 
@@ -9,7 +8,6 @@ export function GiftCategories() {
   return (
     <section id="categories" className="relative w-full border-t border-neutral-800/50 py-24 sm:py-32 lg:py-40">
       <div className="w-full px-6 lg:px-8">
-        {/* Header */}
         <div>
           <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-500">
             Collections
@@ -26,19 +24,10 @@ export function GiftCategories() {
           <div className="mt-8 h-px w-full bg-neutral-800/50" />
         </div>
 
-        {/* 3-column grid, 2 rows of big square cards */}
         <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {GIFT_CATEGORIES.map((category, i) => (
-            <motion.div
+          {GIFT_CATEGORIES.map((category) => (
+            <div
               key={category.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{
-                duration: 0.4,
-                delay: i * 0.05,
-                ease: "easeOut",
-              }}
               className="group relative aspect-square overflow-hidden rounded-xl border border-neutral-800 transition-colors duration-300 hover:border-neutral-700"
             >
               <Image
@@ -46,7 +35,7 @@ export function GiftCategories() {
                 alt={category.title}
                 fill
                 loading="lazy"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent" />
@@ -83,7 +72,7 @@ export function GiftCategories() {
                   borderWidth={1}
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

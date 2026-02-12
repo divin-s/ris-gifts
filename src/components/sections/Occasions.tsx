@@ -40,7 +40,7 @@ export function Occasions() {
                     alt={occasion.title}
                     fill
                     loading="lazy"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
