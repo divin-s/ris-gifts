@@ -112,8 +112,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Premium leather goods, designer accessories, and high-end tech for C-suite recipients.",
     tags: ["Leather", "Tech", "Designer"],
-    image:
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80",
+    image: "/img/luxuryexecutivegifts.png",
   },
   {
     icon: Package,
@@ -121,8 +120,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Custom-curated gift boxes with your company branding, perfect for client appreciation.",
     tags: ["Custom", "Branded", "Curated"],
-    image:
-      "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=600&q=80",
+    image: "/img/Branded_Gift_Boxes.png",
   },
   {
     icon: Coffee,
