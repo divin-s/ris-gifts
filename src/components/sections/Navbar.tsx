@@ -11,30 +11,32 @@ export function Navbar() {
   const scrollTo = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       e.preventDefault();
-      const id = href.replace("#", "");
-      const el = document.getElementById(id);
-      if (!el) return;
       setMobileOpen(false);
 
-      const start = window.scrollY;
-      const target = el.getBoundingClientRect().top + start - 80;
-      const distance = target - start;
-      const duration = Math.min(1800, Math.max(800, Math.abs(distance) * 0.5));
-      let startTime: number | null = null;
+      // Small delay to let mobile menu close first
+      requestAnimationFrame(() => {
+        const id = href.replace("#", "");
+        const el = document.getElementById(id);
+        if (!el) return;
 
-      // Ease-in-out cubic for natural scroll feel
-      const ease = (t: number) =>
-        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        const start = window.scrollY;
+        const target = el.getBoundingClientRect().top + start - 80;
+        const distance = target - start;
+        const duration = Math.min(1200, Math.max(600, Math.abs(distance) * 0.3));
+        let startTime: number | null = null;
 
-      const step = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const elapsed = timestamp - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        window.scrollTo(0, start + distance * ease(progress));
-        if (progress < 1) requestAnimationFrame(step);
-      };
+        const ease = (t: number) =>
+          t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-      requestAnimationFrame(step);
+        const step = (timestamp: number) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          window.scrollTo(0, start + distance * ease(progress));
+          if (progress < 1) requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+      });
     },
     [],
   );
