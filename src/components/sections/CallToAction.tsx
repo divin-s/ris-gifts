@@ -17,11 +17,11 @@ export function CallToAction() {
         className="object-cover"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-neutral-950/85 backdrop-blur-[2px]" />
+      <div className="absolute -inset-px bg-neutral-950/85 backdrop-blur-[2px]" />
 
       {/* Content */}
       <div className="relative w-full px-6 lg:px-8">
-        <div className="mx-auto max-w-[90rem]">
+        <div>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-24">
             {/* Left — big heading */}
             <div>

@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="w-full border-t border-neutral-800">
       <div className="w-full px-6 lg:px-8">
-        <div className="mx-auto max-w-[90rem] py-12">
+        <div className="py-12">
           <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
             {/* Logo & tagline */}
             <div className="text-center md:text-left">

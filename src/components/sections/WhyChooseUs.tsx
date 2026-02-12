@@ -14,7 +14,7 @@ export function WhyChooseUs() {
 
       <div className="relative w-full px-6 lg:px-8">
         {/* Full-width split layout: heading left, grid right */}
-        <div className="mx-auto grid max-w-[90rem] gap-16 lg:grid-cols-[1fr_1.5fr] lg:gap-24">
+        <div className="grid gap-16 lg:grid-cols-[1fr_1.5fr] lg:gap-24">
           {/* Sticky heading column */}
           <div className="lg:sticky lg:top-32 lg:self-start">
             <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-500">

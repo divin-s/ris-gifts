@@ -11,7 +11,7 @@ export function Stats() {
       <div className="absolute left-1/2 top-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-800/10 blur-3xl" />
 
       <div className="relative w-full px-6 lg:px-8">
-        <div className="mx-auto max-w-[90rem]">
+        <div>
           <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-neutral-800/50">
             {STATS.map((stat, i) => (
               <motion.div

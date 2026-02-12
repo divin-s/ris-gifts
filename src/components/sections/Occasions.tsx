@@ -9,7 +9,7 @@ export function Occasions() {
   return (
     <section id="occasions" className="relative w-full border-t border-neutral-800/50 py-24 sm:py-32 lg:py-40">
       <div className="w-full px-6 lg:px-8">
-        <div className="mx-auto max-w-[90rem]">
+        <div>
           {/* Header — left aligned */}
           <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-500">
             Occasions

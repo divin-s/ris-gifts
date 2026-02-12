@@ -8,7 +8,7 @@ export function TrustIndicators() {
   return (
     <section className="relative w-full py-24 sm:py-32 lg:py-40">
       <div className="w-full px-6 lg:px-8">
-        <div className="mx-auto max-w-[90rem]">
+        <div>
           {/* Horizontal layout — heading + cards inline */}
           <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-20">
             <div className="lg:sticky lg:top-32 lg:self-start">
