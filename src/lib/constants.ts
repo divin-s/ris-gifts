@@ -128,8 +128,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Artisan chocolates, premium teas, organic hampers, and wellness-focused gift sets.",
     tags: ["Food", "Wellness", "Organic"],
-    image:
-      "https://images.unsplash.com/photo-1563865436874-9aef32095fad?w=600&q=80",
+    image: "/img/Gourmet_Wellness.png",
   },
   {
     icon: Briefcase,
@@ -137,8 +136,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Onboarding gift sets that make new hires feel valued from day one.",
     tags: ["Onboarding", "Team", "Culture"],
-    image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80",
+    image: "/img/Employee_Welcome_Kits.png",
   },
   {
     icon: Award,
@@ -146,8 +144,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Trophies, plaques, and milestone gifts to celebrate employee achievements.",
     tags: ["Awards", "Milestones", "Custom"],
-    image:
-      "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
+    image: "/img/Awards_Recognition.png",
   },
   {
     icon: Gift,
@@ -155,8 +152,7 @@ export const GIFT_CATEGORIES: GiftCategory[] = [
     description:
       "Eid, Diwali, Christmas, and National Day themed gift collections for every celebration.",
     tags: ["Seasonal", "Cultural", "Festive"],
-    image:
-      "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600&q=80",
+    image: "/img/Seasonal_Collections.png",
   },
 ];
 
