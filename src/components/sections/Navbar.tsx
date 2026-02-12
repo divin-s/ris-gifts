@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { Gift, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAV_ITEMS, COMPANY } from "@/lib/constants";
 
@@ -45,13 +46,8 @@ export function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-xl">
       <div className="flex h-16 items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900">
-            <Gift className="h-4 w-4 text-neutral-400" />
-          </div>
-          <span className="font-display text-lg text-white">
-            {COMPANY.shortName}
-          </span>
+        <a href="#" className="flex items-center">
+          <Image src="/img/logo.png" alt={COMPANY.shortName} width={200} height={60} className="w-[35%] object-contain" />
         </a>
 
         {/* Desktop nav */}

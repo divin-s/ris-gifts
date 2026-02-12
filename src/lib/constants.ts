@@ -189,39 +189,34 @@ export const OCCASIONS: Occasion[] = [
     icon: Building2,
     title: "Client Appreciation",
     description: "Strengthen business relationships with thoughtful gestures.",
-    image:
-      "https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&q=80",
+    image: "/img/Client Appreciation.png",
   },
   {
     icon: PartyPopper,
     title: "Festive Celebrations",
     description: "Eid, Diwali, Christmas, and National Day gift programs.",
-    image:
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=600&q=80",
+    image: "/img/Festive_Celebrations.png",
   },
   {
     icon: Award,
     title: "Employee Milestones",
     description:
       "Work anniversaries, promotions, and outstanding achievements.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80",
+    image: "/img/Employee Recognition.png",
   },
   {
     icon: Calendar,
     title: "Corporate Events",
     description: "Conferences, trade shows, and product launch giveaways.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+    image: "/img/Corporate_Events.png",
   },
 ];
 
-export const CTA_IMAGE =
-  "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80";
+export const CTA_IMAGE = "/img/Background_image.jpg";
 
 export const COMPANY = {
   name: "RIS Services DMCC",
-  shortName: "RIS Corporate Gifts",
+  shortName: "Corporate Gifts",
   email: "gifts@risservices.ae",
   phone: "+971 4 xxx xxxx",
   location: "Dubai, UAE",

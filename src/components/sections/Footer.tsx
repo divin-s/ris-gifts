@@ -1,6 +1,6 @@
 "use client";
 
-import { Gift } from "lucide-react";
+import Image from "next/image";
 import { NAV_ITEMS, COMPANY } from "@/lib/constants";
 
 export function Footer() {
@@ -11,13 +11,8 @@ export function Footer() {
           <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
             {/* Logo & tagline */}
             <div className="text-center md:text-left">
-              <a href="#" className="inline-flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900">
-                  <Gift className="h-4 w-4 text-neutral-400" />
-                </div>
-                <span className="font-display text-lg text-white">
-                  {COMPANY.shortName}
-                </span>
+              <a href="#" className="inline-flex items-center">
+                <Image src="/img/logo.png" alt={COMPANY.shortName} width={200} height={60} className="w-[35%] object-contain" />
               </a>
               <p className="mt-2 text-xs font-light text-neutral-600">
                 {COMPANY.tagline} &middot; {COMPANY.name}
