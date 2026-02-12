@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { OCCASIONS } from "@/lib/constants";
 
@@ -25,13 +24,9 @@ export function Occasions() {
           <div className="mt-8 h-px w-full bg-neutral-800/50" />
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {OCCASIONS.map((occasion, i) => (
-              <motion.div
+            {OCCASIONS.map((occasion) => (
+              <div
                 key={occasion.title}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
                 className="group relative overflow-hidden rounded-xl border border-neutral-800 transition-colors duration-300 hover:border-neutral-700"
               >
                 <div className="relative h-72 w-full overflow-hidden sm:h-80 lg:h-96">
@@ -67,7 +62,7 @@ export function Occasions() {
                     borderWidth={1}
                   />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
