@@ -31,27 +31,26 @@ export function GiftCategories() {
           {GIFT_CATEGORIES.map((category, i) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{
-                duration: 0.5,
-                delay: i * 0.06,
-                ease: [0.25, 0.46, 0.45, 0.94],
+                duration: 0.4,
+                delay: i * 0.05,
+                ease: "easeOut",
               }}
-              className="group relative aspect-square overflow-hidden rounded-xl border border-neutral-800 transition-all duration-300 hover:border-neutral-700"
+              className="group relative aspect-square overflow-hidden rounded-xl border border-neutral-800 transition-colors duration-300 hover:border-neutral-700"
             >
-              {/* Full-bleed square image */}
               <Image
                 src={category.image}
                 alt={category.title}
                 fill
+                loading="lazy"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent" />
 
-              {/* Content pinned to bottom */}
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-700/50 bg-neutral-900/80 backdrop-blur-sm">
                   <category.icon className="h-5 w-5 text-neutral-300" />
@@ -63,7 +62,6 @@ export function GiftCategories() {
                   {category.description}
                 </p>
 
-                {/* Tags */}
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {category.tags.map((tag) => (
                     <span

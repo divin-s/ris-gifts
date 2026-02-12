@@ -9,7 +9,6 @@ export function TrustIndicators() {
     <section className="relative w-full py-24 sm:py-32 lg:py-40">
       <div className="w-full px-6 lg:px-8">
         <div>
-          {/* Horizontal layout — heading + cards inline */}
           <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-20">
             <div className="lg:sticky lg:top-32 lg:self-start">
               <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-500">
@@ -29,15 +28,11 @@ export function TrustIndicators() {
               {TRUST_INDICATORS.map((item, i) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    ease: [0.25, 0.46, 0.45, 0.94],
-                  }}
-                  className="group relative flex flex-col items-center rounded-xl border border-neutral-800 bg-neutral-900/60 p-8 text-center transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-800/60"
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
+                  className="group relative flex flex-col items-center rounded-xl border border-neutral-800 bg-neutral-900/60 p-8 text-center transition-colors duration-300 hover:border-neutral-700 hover:bg-neutral-800/60"
                 >
                   <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 transition-colors duration-300 group-hover:border-neutral-700">
                     <item.icon className="h-6 w-6 text-neutral-400" />

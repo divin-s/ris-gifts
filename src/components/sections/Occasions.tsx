@@ -10,7 +10,6 @@ export function Occasions() {
     <section id="occasions" className="relative w-full border-t border-neutral-800/50 py-24 sm:py-32 lg:py-40">
       <div className="w-full px-6 lg:px-8">
         <div>
-          {/* Header — left aligned */}
           <span className="text-[11px] font-medium uppercase tracking-widest text-neutral-500">
             Occasions
           </span>
@@ -25,33 +24,27 @@ export function Occasions() {
           </div>
           <div className="mt-8 h-px w-full bg-neutral-800/50" />
 
-          {/* Full-width horizontal scroll on mobile, 4-col on desktop */}
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {OCCASIONS.map((occasion, i) => (
               <motion.div
                 key={occasion.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: i * 0.08,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                }}
-                className="group relative overflow-hidden rounded-xl border border-neutral-800 transition-all duration-300 hover:border-neutral-700"
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
+                className="group relative overflow-hidden rounded-xl border border-neutral-800 transition-colors duration-300 hover:border-neutral-700"
               >
-                {/* Full card is the image */}
                 <div className="relative h-72 w-full overflow-hidden sm:h-80 lg:h-96">
                   <Image
                     src={occasion.image}
                     alt={occasion.title}
                     fill
+                    loading="lazy"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
 
-                  {/* Content at bottom */}
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-700/50 bg-neutral-900/80 backdrop-blur-sm">
                       <occasion.icon className="h-4 w-4 text-neutral-300" />
